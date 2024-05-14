@@ -1,0 +1,291 @@
+*{
+    box-sizing: border-box;
+    margin: 0;
+    padding: 0;
+}
+html, body {
+    margin: 0;
+  }
+  
+  #particle-canvas {
+    width: 100%;
+    height: 100vh;
+    background: linear-gradient(to bottom, rgb(10, 10, 50) 0%,rgb(60, 10, 60) 100%);
+    vertical-align: middle;
+    position: absolute;
+    top:0;
+    z-index: -1;
+  }
+#header{
+    width: 100%;
+    height: 50px;
+    background-color: rgb(243, 249, 249);
+   display: grid;
+   grid-template-columns:1fr 2fr; 
+   font-size: 30px;
+   position: fixed;
+}
+#logo{
+    margin-left: 20px;
+    font-family: 'Franklin Gothic Medium', 'Arial Narrow', Arial, sans-serif;
+}
+a{
+   text-decoration: none;
+}
+#navbar {
+    display: grid;
+    grid-template-columns: repeat(4,1fr);
+}
+  #navbar a{
+    text-decoration: none;
+    width: 200px;
+    text-align: center;
+    
+}
+#navbar a:hover{
+color: #0ef;
+}
+#navbar a::before{
+    margin-left: 0  ;
+}
+#navbar a::after,#navbar a::before{
+    content: '';
+    width: 0%;
+    height: 2px;
+    background: #0ef;
+    display: block;
+    transition: 0.5s;  
+}
+#navbar a:hover::after, #navbar a:hover::before{
+    width: 100%;
+}
+#container{
+padding-top: 80px;
+width: 100%;
+height: 50em;
+}
+h1{
+    max-width: 600px;
+    font-size: 50px;
+}
+h3{
+    color: white;
+}
+#about{
+    display: grid;
+    grid-template-columns: 1fr 1fr ;
+}
+#img{
+    border-radius: 50%;
+    position: absolute;
+    top: 208px;
+    right:315px;
+    z-index: 0;
+}
+#con{
+    width: 400px;
+    height: 400px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    border-radius: 50%;
+    border-bottom: 8px solid #0ef;
+    border-top: 8px solid rgb(190, 20, 20);
+    margin-top:100px;
+    margin-left: 100px;
+    animation-name: img;
+    animation-duration: 4s;
+    animation-timing-function: ease-in-out;
+    animation-iteration-count: infinite;
+    animation-direction: alternate;
+}
+@keyframes img{
+    to{
+        transform: rotate(350deg);
+    }
+}
+#about-log{
+    margin-top: 20px;
+}
+#about-log a{
+    width: 40px;
+    height: 40px;
+    border: 2px solid #0ef;
+    font-size: 30px;
+    display: inline-flex;
+    justify-content: center;
+    align-items: center;
+    border-radius: 50%;
+    color: #0ef;
+    margin: 30px 15px 30px 0;
+}
+#about-log a:hover{
+    box-shadow: 0 0 20px #0ef;
+    background: cyan;
+    color: black;
+    transform: all 0.3s;
+}
+#about-text
+{
+    margin-top: 200px;
+    margin-left: 100px;
+}
+button {
+    --color: #0077ff;
+    font-family: inherit;
+    display: inline-block;
+    width: 6em;
+    height: 2.6em;
+    line-height: 2.5em;
+    overflow: hidden;
+    cursor: pointer;
+    font-size: 17px;
+    z-index: 1;
+    color: var(--color);
+    border: 2px solid var(--color);
+    border-radius: 6px;
+    position: relative;
+    margin-left: 30px;
+}
+  button::before {
+    position: absolute;
+    content: "";
+    background: var(--color);
+    width: 150px;
+    height: 200px;
+    z-index: -1;
+    border-radius: 50%;
+  }
+  button:hover {
+    color: white;
+  }
+  
+  button:before {
+    top: 100%;
+    left: 100%;
+    transition: 0.3s all;
+  }
+  
+  button:hover::before {
+    top: -30px;
+    left: -30px;
+  }
+/* #whatsap{
+    width: 80px;
+    height: 80px;
+    font-size: 40px;
+    border-radius: 50%;
+    border:  2px solid #0ef;
+}
+#whatsap:hover{
+    background-color: #0ef;
+    box-shadow: 0 0 0 0 #0ef;
+    color: black;
+}
+#telegram{
+    font-size: 40px;
+    width: 80px;
+    height: 80px;
+    border:  2px solid #0ef;
+    border-radius: 50%;
+}
+#instagram{
+    font-size: 40px;
+    width: 80px;
+    height: 80px;
+    border:  2px solid #0ef;
+    border-radius: 50%;
+
+}
+#git{
+    font-size: 40px;
+    width: 80px;
+    height: 80px;
+    border:  2px solid #0ef;
+    border-radius: 50%;
+} */
+section{
+    padding-top: 180px;
+    width: 100%;
+}
+#h1-info{
+    margin-left: 550px;
+}
+#seaction-main{
+    padding-top: 10px;
+    display: grid;
+    grid-template-columns: 250px 600px ;
+    margin-left: 300px;
+}
+#img-info img{
+    border: 5px solid #0077ff;
+}
+#text-info{
+    padding-top: 30px;
+    width: 550px;
+    margin: auto;
+    color: #0077ff;
+    border: 3px solid #0ef;
+    padding: 10px;
+    background-image: linear-gradient(60deg, #abecd6 0%, #fbed96 100%);
+}
+#text-info:hover{
+    background-image: linear-gradient(-20deg, #00cdac 0%, #8ddad5 100%);
+    color: black;
+    font-style: italic;
+    font-family: 'Franklin Gothic Medium', 'Arial Narrow', Arial, sans-serif;
+    border: 10px solid #fbed96;
+}
+#foto-galeria{
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+}
+#foto{
+    display: grid;
+    grid-template-columns: repeat(2,1fr);
+}
+#h1-foto{
+    margin-left: 700px;
+}
+#football2{
+    width: 200px;
+    height: 250px;
+}
+#football{
+    width: 200px;
+    height: 250px;
+    border: 2px solid #0077ff;
+}
+#Foodball-p{
+    padding: 5px;
+    width: 180px;
+    height: 100px;
+    border: 2px solid #00cdac;
+    position: absolute;
+   
+}
+#fooball-img{
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    gap: 20px;
+}
+#Foodball-p2{
+    color: #fbed96;
+    padding: 5px;
+    width: 180px;
+    height: 100px;
+    border: 2px solid #00cdac;
+    position: absolute;
+    left: 230px;
+    cursor: -webkit-zoom-in;
+}
+
+
+#line{
+    width: 1px;
+    height: 600px;
+    border: 1px solid cyan;
+    position: absolute;
+    top:1390px;
+    left: 800px;
+}
